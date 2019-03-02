@@ -1,0 +1,25 @@
+h1{
+  color: grey;
+}
+#grad{
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(red, blue);
+}
+#transition {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+#transition:hover{
+   width: 300px;
+}
+
+#transform{
+  width:200px;
+  height:100px;
+  background-color:yellow;
+  /* Rotate div */
+  transform:rotate(30deg);
+}
