@@ -7,10 +7,6 @@ const MyPlugin = require('../plugins/myPlugin')
 
 module.exports = {
     entry: getEntries(),
-    // entry: {
-    //     login: './src/js/login.js',
-    //     register: './src/js/register.js',
-    // },
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: "../"
@@ -18,15 +14,43 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(html)$/,
+                test: /\.(png|svg|jpg|gif)$/,
                 use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: 'images/[name].[ext]',
+                        publicPath: '../'
+                    }
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: 'fonts/[name].[ext]',
+                        publicPath: "../"
+                    }
+                }
+            },
+            {
+                test: /\.(html)$/,
+                use: [{
                     loader: 'html-loader',
                     options: {
                         attrs: ['img:src', 'img:data-src', 'audio:src'],
                         // minimize: true
-                        publicPath: './'
+                        publicPath: '../'
                     }
-                }
+                },{
+                    loader: path.resolve('./loaders/styleAttrInHtml.js'),
+                    options: {
+                        remUnit: 192,
+                        remPrecision: 3,
+                    }
+                }]
             }
         ]
     },
