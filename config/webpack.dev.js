@@ -9,7 +9,7 @@ module.exports = merge(common, {
         openPage: 'dist/pages/settledApproval.html',
         overlay: true,
         compress: true,
-        host: "192.168.0.101",
+        //host: "192.168.0.101",
         hot: true,
         publicPath: '/dist/'
     },

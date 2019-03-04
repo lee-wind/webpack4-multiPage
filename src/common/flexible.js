@@ -77,14 +77,16 @@
     }
 
     win.addEventListener('resize', function() {
-        clearTimeout(tid);
-        tid = setTimeout(refreshRem, 300);
+        refreshRem();
+        // clearTimeout(tid);
+        // tid = setTimeout(refreshRem, 300);
     }, false);
     win.addEventListener('pageshow', function(e) {
-        if (e.persisted) {
-            clearTimeout(tid);
-            tid = setTimeout(refreshRem, 300);
-        }
+        refreshRem();
+        // if (e.persisted) {
+        //     clearTimeout(tid);
+        //     tid = setTimeout(refreshRem, 300);
+        // }
     }, false);
 
     if (doc.readyState === 'complete') {

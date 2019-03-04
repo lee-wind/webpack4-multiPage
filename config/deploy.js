@@ -25,8 +25,16 @@ module.exports = {
                     test:/[\\/]src[\\/]common[\\/]/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
                     name: "common", //生成文件名，依据output规则
                     minSize: 0,
+                    priority: 80,
                     chunks:"all",
                 },
+                // flexible: {
+                //     test:/[\\/]src[\\/]common[\\/]flexible.js/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
+                //     name: "flexible", //生成文件名，依据output规则
+                //     minSize: 0,
+                //     priority: 90,
+                //     chunks:"all",
+                // },
             }
         },
         minimizer: [

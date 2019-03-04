@@ -8,7 +8,7 @@ import 'Js/header.js'
 import 'Js/aside.js'
 
 
-console.log("入驻审批");
+console.log("监控预警");
 
 if(module.hot){
     module.hot.accept();
