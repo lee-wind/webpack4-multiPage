@@ -10,6 +10,6 @@ import 'Js/aside.js'
 
 console.log("监控预警");
 
-if(module.hot){
-    module.hot.accept();
-}
+// if(module.hot){
+//     module.hot.accept();
+// }

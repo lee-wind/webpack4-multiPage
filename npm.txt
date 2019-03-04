@@ -6,13 +6,12 @@ webpack-dev-server webpack-merge mini-css-extract-plugin
 babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime
 babel-plugin-transform-remove-console optimize-css-assets-webpack-plugin
 postcss-loader postcss-preset-env purify-css purifycss-webpack
-px2rem-loader npm-install-webpack-plugin
-inline-chunk-manifest-html-webpack-plugin --save-dev
+px2rem-loader copy-webpack-plugin
 --save-dev
 
-npm install webpack webpack-cli
+npm install webpack webpack-cli --save-dev
 
-cnpm install style-loader css-loader file-loader url-loader html-loader html-webpack-plugin clean-webpack-plugin webpack-dev-server webpack-merge mini-css-extract-plugin babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-plugin-transform-remove-console optimize-css-assets-webpack-plugin postcss-loader postcss-preset-env purify-css purifycss-webpack px2rem-loader npm-install-webpack-plugin inline-chunk-manifest-html-webpack-plugin --save-dev
+cnpm install style-loader css-loader file-loader url-loader html-loader html-webpack-plugin clean-webpack-plugin webpack-dev-server webpack-merge mini-css-extract-plugin babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-plugin-transform-remove-console optimize-css-assets-webpack-plugin postcss-loader postcss-preset-env purify-css purifycss-webpack px2rem-loader copy-webpack-plugin --save-dev
 
 cnpm install @babel/polyfill @babel/runtime bootstrap@3 jquery@1 lib-flexible --save
 

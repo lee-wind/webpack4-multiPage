@@ -2,9 +2,9 @@ const path = require('path');
 const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-//const MyPlugin = require('../plugins/myPlugin');
-//const NpmInstallPlugin = require('npm-install-webpack-plugin');
+
 
 module.exports = {
     entry: getEntries(),
@@ -69,12 +69,16 @@ module.exports = {
             root: path.resolve(__dirname, '../')
         }),
         ...getNewHtmlWebpackPlugin(),
-        //new MyPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
         }),
-        //new NpmInstallPlugin(),
+        new CopyPlugin([
+            {
+                from: './src/common/flexible.js',
+                to: 'js/flexible.js',
+            }
+        ])
     ]
 };
 
@@ -83,8 +87,6 @@ function getEntries(){
     getEntryName().forEach(page => {
         entrys[page] = `./src/js/${page}.js`
     });
-    entrys.flexible = './src/common/flexible.js';
-    console.log(entrys);
     return entrys;
 }
 

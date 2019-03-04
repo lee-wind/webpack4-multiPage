@@ -10,6 +10,6 @@ import 'Js/aside.js'
 
 console.log("入驻审批");
 
-if(module.hot){
-    module.hot.accept();
-}
+// if(module.hot){
+//     module.hot.accept();
+// }

@@ -30,13 +30,13 @@ module.exports = merge(common, {
                 use: [
                     'style-loader',
                     'css-loader',
-                    {
-                      loader: 'px2rem-loader',
-                      options: {
-                          remUnit: 192,
-                          remPrecision: 3,
-                      }
-                    },
+                    // {
+                    //   loader: 'px2rem-loader',
+                    //   options: {
+                    //       remUnit: 192,
+                    //       remPrecision: 3,
+                    //   }
+                    // },
                     'postcss-loader',
                     'sass-loader',
                 ]

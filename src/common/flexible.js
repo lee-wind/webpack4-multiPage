@@ -78,7 +78,7 @@
 
     win.addEventListener('resize', function() {
         refreshRem();
-        // clearTimeout(tid);
+        //clearTimeout(tid);
         // tid = setTimeout(refreshRem, 300);
     }, false);
     win.addEventListener('pageshow', function(e) {
