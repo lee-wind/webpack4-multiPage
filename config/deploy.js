@@ -57,9 +57,9 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        plugins: [
-                            'transform-remove-console'
-                        ]
+                        // plugins: [
+                        //     'transform-remove-console'
+                        // ]
                     }
                 }
             },
@@ -68,13 +68,13 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    // {
-                    //     loader: 'px2rem-loader',
-                    //     options: {
-                    //         remUnit: 192,
-                    //         remPrecision: 3,
-                    //     }
-                    // },
+                    {
+                        loader: 'px2rem-loader',
+                        options: {
+                            remUnit: 192,
+                            remPrecision: 3,
+                        }
+                    },
                     'postcss-loader',
                     'sass-loader',
                 ]

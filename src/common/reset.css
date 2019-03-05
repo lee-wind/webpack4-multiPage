@@ -37,6 +37,7 @@ button
 }
 body{
     font-family: 'Microsoft YaHei';
+    font-size: 12px;
 }
 ol, ul{
     list-style: none;

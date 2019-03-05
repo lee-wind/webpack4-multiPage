@@ -77,6 +77,9 @@ module.exports = {
             {
                 from: './src/common/flexible.js',
                 to: 'js/flexible.js',
+            },{
+                from: './src/common/rem.js',
+                to: 'js/rem.js',
             }
         ])
     ]

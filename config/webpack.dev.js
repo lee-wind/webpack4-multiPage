@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -11,6 +12,7 @@ module.exports = merge(common, {
         compress: true,
         //host: "192.168.0.101",
         hot: true,
+        //hotOnly:true,
         publicPath: '/dist/'
     },
     output: {
@@ -28,15 +30,16 @@ module.exports = merge(common, {
             {
                 test: /\.(sc|le|c)ss$/,
                 use: [
+                    //MiniCssExtractPlugin.loader,
                     'style-loader',
                     'css-loader',
-                    // {
-                    //   loader: 'px2rem-loader',
-                    //   options: {
-                    //       remUnit: 192,
-                    //       remPrecision: 3,
-                    //   }
-                    // },
+                    {
+                      loader: 'px2rem-loader',
+                      options: {
+                          remUnit: 192,
+                          remPrecision: 3,
+                      }
+                    },
                     'postcss-loader',
                     'sass-loader',
                 ]
@@ -64,6 +67,9 @@ module.exports = merge(common, {
         ],
     },
     plugins: [
+        // new MiniCssExtractPlugin({
+        //     filename: 'css/[name].[id].css',
+        // }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             "SERVER_ENV": JSON.stringify("development")
