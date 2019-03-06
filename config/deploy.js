@@ -13,30 +13,30 @@ module.exports = {
     },
     optimization: {
         runtimeChunk: 'single',
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendor',
-                    minSize: 0,
-                    chunks: 'all',
-                },
-                common: {
-                    test:/[\\/]src[\\/]common[\\/]/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
-                    name: "common", //生成文件名，依据output规则
-                    minSize: 0,
-                    priority: 80,
-                    chunks:"all",
-                },
-                // flexible: {
-                //     test:/[\\/]src[\\/]common[\\/]flexible.js/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
-                //     name: "flexible", //生成文件名，依据output规则
-                //     minSize: 0,
-                //     priority: 90,
-                //     chunks:"all",
-                // },
-            }
-        },
+        // splitChunks: {
+        //     cacheGroups: {
+        //         vendor: {
+        //             test: /[\\/]node_modules[\\/]/,
+        //             name: 'vendor',
+        //             minSize: 0,
+        //             chunks: 'initial',
+        //         },
+        //         common: {
+        //             test:/[\\/]src[\\/]common[\\/]/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
+        //             name: "common", //生成文件名，依据output规则
+        //             minSize: 0,
+        //             priority: 80,
+        //             chunks:"initial",
+        //         },
+        //         // flexible: {
+        //         //     test:/[\\/]src[\\/]common[\\/]flexible.js/,//也可以值文件/[\\/]src[\\/]js[\\/].*\.js/,
+        //         //     name: "flexible", //生成文件名，依据output规则
+        //         //     minSize: 0,
+        //         //     priority: 90,
+        //         //     chunks:"all",
+        //         // },
+        //     }
+        // },
         minimizer: [
             new TerserPlugin({
                 sourceMap: true, // Must be set to true if using source-maps in production

@@ -1,15 +1,11 @@
-import 'Common/reset.css'
-import 'Common/common.scss'
-import 'Css/header.scss'
-import 'Css/aside.scss'
-
+// import 'Common/reset.css'
+// import 'Common/common.scss'
+// import 'Common/css/header.scss'
+// import 'Common/css/aside.scss'
+//
 // import 'Common/flexible.js'
-import 'Js/header.js'
-import 'Js/aside.js'
+// import 'Common/js/header.js'
+// import 'Common/js/aside.js'
+import 'Common/index.js'
 
-
-console.log("入驻审批23");
-
-if(module.hot){
-    module.hot.accept();
-}
+console.log("入驻审批");

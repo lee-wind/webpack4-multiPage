@@ -77,9 +77,6 @@ module.exports = {
             {
                 from: './src/common/flexible.js',
                 to: 'js/flexible.js',
-            },{
-                from: './src/common/rem.js',
-                to: 'js/rem.js',
             }
         ])
     ]
@@ -99,7 +96,7 @@ function getNewHtmlWebpackPlugin(){
         newHtmlWebpackPlugins.push(new HtmlWebpackPlugin({
             filename: `pages/${page}.html`,
             template: `src/pages/${page}.html`,
-            chunks: [`${page}`, 'vendor', 'common', 'runtime'],
+            // chunks: [`${page}`, 'vendor', 'common', 'runtime'],
         }))
     });
     return newHtmlWebpackPlugins;
