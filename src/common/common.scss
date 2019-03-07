@@ -346,6 +346,13 @@
 //html{
 //  font-size: 0px; /*no*/
 //}
+@mixin border-radius{
+  border-radius: 5px;
+}
+.border-radius{
+  border-radius: 5px;
+}
+
 .body{
   @include clearfix;
   background-color: rgba(0, 0, 0, .3);
@@ -360,7 +367,6 @@
     min-height: 856px;
     margin-right: 81px;
     background-color: #ffffff;
-    border-radius: 5px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
     h1{
       font-size: 32px;

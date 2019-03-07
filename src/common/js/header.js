@@ -1,3 +1,5 @@
 import 'Common/css/header.scss'
-
-console.log("header");
+//
+// // import apiPrefix from "Common/index.js";
+//
+console.log("header: " + apiPrefix);

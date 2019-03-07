@@ -1,25 +1,18 @@
-import 'Common/reset.css'
-import 'Common/common.scss'
+let apiPrefix;
 
-// import 'Common/flexible.js'
-
-import 'Common/js/header.js'
-import 'Common/js/aside.js'
-
-let ip;
-
-switch (process.NODE_ENV) {
+switch (SERVER_ENV) {
     case 'development':
         console.log("本地");
-        if(module.hot){
-            module.hot.accept();
-        }
+        apiPrefix = "http://118.126.95.244:8080";
         break;
     case 'test':
+        apiPrefix = "http://www.bilibili.com";
         console.log("测试");
         break;
-    case 'prod':
+    case 'production':
+        apiPrefix = "http://www.baidu.com";
         console.log("正式");
         break;
 }
-export default ip;
+
+export default apiPrefix;

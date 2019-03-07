@@ -1,3 +1,3 @@
 import 'Common/css/aside.scss'
-
-console.log("aside");
+//
+console.log("aside: " + apiPrefix);

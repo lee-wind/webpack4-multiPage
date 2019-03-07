@@ -17,11 +17,11 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: {
-                    loader: 'url-loader',
+                    // loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
-                        limit: 8192,
                         name: 'images/[name].[ext]',
-                        publicPath: '../'
+                        //publicPath: '../'
                     }
                 }
             },
@@ -72,6 +72,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
+            apiPrefix: [path.resolve(__dirname, '../src/common/index.js'), 'default']
         }),
         new CopyPlugin([
             {
@@ -96,7 +97,7 @@ function getNewHtmlWebpackPlugin(){
         newHtmlWebpackPlugins.push(new HtmlWebpackPlugin({
             filename: `pages/${page}.html`,
             template: `src/pages/${page}.html`,
-            // chunks: [`${page}`, 'vendor', 'common', 'runtime'],
+            chunks: [`${page}`, 'vendor', 'common', 'runtime'],
         }))
     });
     return newHtmlWebpackPlugins;
