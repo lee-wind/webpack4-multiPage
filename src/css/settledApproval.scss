@@ -31,27 +31,61 @@
       height: 160px;
       //background-color: rgba(0, 0, 0, .3);
       .select{
+        display: inline-block;
+        margin-top: 96px;
+        cursor: pointer;
+        height: 40px;
         .select-field{
-
-        }
-        .triangle-up{
-          width:0;
-          height:0;
-          border-left:30px solid transparent;
-          border-right:30px solid transparent;
-          border-bottom:30px solid #0066cc;
-        }
-        .triangle-down{
-          width:0;
-          height:0;
-          border-left:30px solid transparent;
-          border-right:30px solid transparent;
-          border-top:30px solid #0066cc;
-        }
-        .select-icon{
-          display: inline-block;
-          width: 13px;
-          height: 19px;
+          font-size: 0;
+          width: 200px;
+          position: relative;
+          color: #333333;
+          //border: 1px solid #E5E5E5; /*no*/
+          .select-text{
+            width: 160px;
+            height: 40px;
+            font-size: 20px;
+            padding: 0 11px;
+            line-height: 40px;
+            border: 1px solid #E5E5E5;
+            border-right: none;
+          }
+          .select-icon-box{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #B2BECF;
+            span{
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 13px;
+              height: 19px;
+              .triangle-up{
+                position: absolute;
+                top: 0;
+                width:0;
+                height:0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid #8598B2;
+              }
+              .triangle-down{
+                position: absolute;
+                bottom: 0;
+                width:0;
+                height:0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid #8598B2;
+              }
+            }
+          }
         }
       }
       .button-group{

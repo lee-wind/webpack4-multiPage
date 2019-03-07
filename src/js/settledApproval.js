@@ -1,8 +1,6 @@
 import 'Common/reset.css'
 import 'Common/common.scss'
 
-import 'font-awesome/css/font-awesome.min.css'
-
 import 'Common/css/header.scss'
 import 'Common/css/aside.scss'
 import 'Common/js/header.js'
