@@ -28,6 +28,19 @@ $(function(){
             $el.addClass('active').siblings().removeClass('active');
             $('.tab-content').eq(index).show().siblings().hide();
         }
+    });
+    $('.select-field').on('click', function(){
+        $(this).next('.select-list').toggle();
+    });
+    $('.select-list').on('click', '.select-item', function(){
+        let $selected = $(this).parent().prev().find('.selected');
+        let $selectList = $(this).parent();
+        $selected.find('.select-text').text($(this).find('.select-text').text());
+        $selected.find('.select-value').text($(this).find('.select-value').text());
+        $selectList.hide();
+    });
+    $('.search').on('click', function(){
+        console.log($('.selected .select-value').text());
     })
 });
 
