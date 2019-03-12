@@ -1,0 +1,36 @@
+.pagination{
+  min-height: 30px;
+  overflow: auto;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+  @mixin common{
+    float: left;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .previous-page{
+    @include common;
+    padding: 0 5px;
+  }
+  .pagination-list{
+    float: left;
+    .pagination-item{
+      @include common;
+      //background-color: #64ADE6;
+      a{
+        display: block;
+        padding: 0 5px;
+        &.pagination-active{
+          color: #ffffff;
+          background-color: #64ADE6;
+        }
+      }
+    }
+  }
+  .next-page{
+    @include common;
+    padding: 0 5px;
+  }
+}

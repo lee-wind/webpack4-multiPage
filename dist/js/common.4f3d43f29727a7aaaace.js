@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(n,o,t){"use strict";var c;t.r(o),c="http://www.baidu.com",console.log("正式"),o.default=c},,function(n,o,t){},function(n,o,t){},,,function(n,o,t){},function(n,o,t){},function(n,o,t){"use strict";(function(n){t(2);console.log("header: "+n)}).call(this,t(0).default)},function(n,o,t){"use strict";(function(n){t(3);console.log("aside: "+n)}).call(this,t(0).default)}]]);
-//# sourceMappingURL=common.4f3d43f29727a7aaaace.js.map

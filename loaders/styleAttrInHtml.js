@@ -6,7 +6,7 @@ module.exports = function (source) {
 
     const options = getOptions(this);
 
-    console.log(options);
+    //console.log(options);
 
     const remPrecision = options.remPrecision;
 

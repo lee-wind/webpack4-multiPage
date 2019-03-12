@@ -146,8 +146,36 @@
       }
     }
     .table{
-      height: 696px;
-      background-color: rgba(0, 0, 0, .5);
+      //min-height: 696px;
+      color: #333333;
+      margin-bottom: 13px;
+      //background-color: rgba(0, 0, 0, .5);
+      table{
+        thead{
+          font-size: 20px;
+          th{
+            height: 56px;
+            background-color: #D7E9FF;
+            border-bottom: 1px solid #64ADE6; /*no*/
+          }
+        }
+        tbody{
+          font-size: 18px;
+          td{
+            height: 72px;
+            padding: 10px;
+            border-bottom: 1px solid #64ADE6; /*no*/
+          }
+        }
+      }
+    }
+    .pagination-box{
+      margin-bottom: 10px;
+      text-align: center;
+      @include clearfix;
+      .pagination{
+        display: inline-block;
+      }
     }
   }
 }

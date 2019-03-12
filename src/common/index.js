@@ -3,7 +3,7 @@ let apiPrefix;
 switch (SERVER_ENV) {
     case 'development':
         console.log("本地");
-        apiPrefix = "http://118.126.95.244:8080";
+        apiPrefix = "http://www.youku.com";
         break;
     case 'test':
         apiPrefix = "http://www.bilibili.com";

@@ -41,10 +41,10 @@
     </div>
     <div class="main settled-approval">
         <div class="tabs">
-            <!--<ul class="tab-list">-->
-                <!--<li class="tab-item border-radius active">待办列表</li>-->
-                <!--<li class="tab-item border-radius">已办列表</li>-->
-            <!--</ul>-->
+            <ul class="tab-list">
+                <li class="tab-item border-radius active">待办列表</li>
+                <li class="tab-item border-radius">已办列表</li>
+            </ul>
         </div>
         <div class="tab-contents">
             <div class="tab-content agenda">
@@ -85,74 +85,117 @@
                         <span class="reset border-radius">重置</span>
                     </div>
                 </form>
-                <table class="table">
-                    <colgroup>
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th>审批事项</th>
-                        <th>申请用户</th>
-                        <th>申请机构</th>
-                        <th>审批状态</th>
-                        <th>申请时间</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 410px;">
+                            <col style="width: 120px;">
+                            <col style="width: 270px;">
+                            <col style="width: 120px;">
+                            <col style="width: 300px;">
+                            <col style="width: 120px;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>审批事项</th>
+                            <th>申请用户</th>
+                            <th>申请机构</th>
+                            <th>审批状态</th>
+                            <th>申请时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-box">
+                    <div class="pagination">
+
+                    </div>
+                </div>
             </div>
-            <div class="tab-content done" style="display: none">
+            <div class="tab-content done" style="display:none;">
                 <form class="form relative">
-                    <div class="button-group absolute-center-right">
+                    <div class="form-item" style="margin-left: 23px; margin-top: 96px;">
+                        <label for="">每页显示数：</label>
+                        <div class="select">
+                            <div class="select-field">
+                                <p class="selected">
+                                    <span class="select-text">10</span>
+                                    <i class="select-value">10</i>
+                                </p>
+                                <div class="select-icon-box">
+                                    <span>
+                                        <i class="triangle-up"></i>
+                                        <i class="triangle-down"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <ul class="select-list">
+                                <li class="select-item">
+                                    <span class="select-text">10</span>
+                                    <i class="select-value">10</i>
+                                </li>
+                                <li class="select-item">
+                                    <span class="select-text">15</span>
+                                    <i class="select-value">15</i>
+                                </li>
+                                <li class="select-item">
+                                    <span class="select-text">20</span>
+                                    <i class="select-value">20</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-group">
                         <span class="search border-radius">查询</span>
                         <span class="reset border-radius">重置</span>
                     </div>
                 </form>
-                <table class="table">
-                    <colgroup>
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                        <col style="width: 200px;">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th>审批事项</th>
-                        <th>申请用户</th>
-                        <th>申请机构</th>
-                        <th>审批状态</th>
-                        <th>申请时间</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 410px;">
+                            <col style="width: 120px;">
+                            <col style="width: 270px;">
+                            <col style="width: 120px;">
+                            <col style="width: 300px;">
+                            <col style="width: 120px;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>审批事项</th>
+                            <th>申请用户</th>
+                            <th>申请机构</th>
+                            <th>审批状态</th>
+                            <th>申请时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-box">
+                    <div class="pagination">
+                        <a class="previous-page"></a>
+                        <ul class="pagination-list">
+                            <li class="pagination-item">
+                                <a class="pagination-link"></a>
+                            </li>
+                        </ul>
+                        <a class="next-page"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,12 @@
+{{each agendaList}}
+    <tr>
+        <td>{{$value.event}}</td>
+        <td>{{$value.user}}</td>
+        <td>{{$value.organization}}</td>
+        <td>{{$value.status}}</td>
+        <td>{{$value.time}}</td>
+        <td>
+            <a href='./serverApproval.html?id={{$value.id}}'>详情</a>
+        </td>
+    </tr>
+{{/each}}

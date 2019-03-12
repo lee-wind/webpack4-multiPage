@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-
+const Util = require('./util')
 
 module.exports = {
     entry: getEntries(),
@@ -15,11 +15,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.art$/,
+                loader: 'art-template-loader'
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: {
-                    // loader: 'url-loader',
-                    loader: 'file-loader',
+                    loader: 'url-loader',
+                    //loader: 'file-loader',
                     options: {
+                        limit: 8192,
                         name: 'images/[name].[ext]',
                         //publicPath: '../'
                     }
@@ -32,7 +37,7 @@ module.exports = {
                     options: {
                         limit: 8192,
                         name: 'fonts/[name].[ext]',
-                        publicPath: "../"
+                        //publicPath: "../"
                     }
                 }
             },
@@ -43,15 +48,11 @@ module.exports = {
                     options: {
                         attrs: ['img:src', 'img:data-src', 'audio:src'],
                         // minimize: true
-                        publicPath: '../'
+                        //publicPath: '../'
                     }
-                },{
-                    loader: path.resolve('./loaders/styleAttrInHtml.js'),
-                    options: {
-                        remUnit: 192,
-                        remPrecision: 3,
-                    }
-                }]
+                },
+                    Util.px2remInStyleAttrInHtml
+                ]
             }
         ]
     },

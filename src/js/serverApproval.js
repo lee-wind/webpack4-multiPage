@@ -12,4 +12,5 @@ if(module.hot){
 
 $(function(){
     console.log("服务审批" + apiPrefix);
+    $('.main h1').text('服务审批');
 })

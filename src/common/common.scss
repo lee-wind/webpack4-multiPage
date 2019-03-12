@@ -302,10 +302,11 @@
   .main{
     float: right;
     width: 1340px;
-    min-height: 856px;
+    //min-height: 856px;
     margin-right: 81px;
     background-color: #ffffff;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    @include border-radius;
     h1{
       font-size: 32px;
     }
