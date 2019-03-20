@@ -6,6 +6,8 @@ import 'Common/css/aside.scss'
 import 'Common/js/header.js'
 import 'Common/js/aside.js'
 
+import 'Css/serverApproval.scss'
+
 if(module.hot){
     module.hot.accept();
 }
