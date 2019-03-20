@@ -23,8 +23,8 @@ babel-plugin-transform-remove-console：移除所有的console.*调用
 @babel/plugin-transform-runtime+@babel/runtime：  
     1、避免@babel/polyfill全局污染,  
     2、重复使用Babel注入的helper程序git代码来节省代码(避免编译输出中的重复)  
-postcss-loader：为CSS添加浏览器前缀
-art-template-loader：JavaScript模板引擎
+postcss-loader：为CSS添加浏览器前缀  
+art-template-loader：JavaScript模板引擎  
 px2rem-loader：px自动转rem  
 
 
