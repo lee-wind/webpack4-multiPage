@@ -3,9 +3,13 @@ webpack4多入口多出口(多页面配置)
 
 webpack4指南：https://webpack.js.org/guides  
 
+注意babel版本
+
 webpack.dev: 本地  
 webpack.prod: 正式  
 webpack.test: 测试
+
+建议用npm，不要用cnpm
 
 DefinePlugin：创建全局常量  
 HotModuleReplacementPlugin：热模块替换  
