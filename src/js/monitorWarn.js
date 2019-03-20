@@ -1,3 +1,5 @@
+// import '@babel/polyfill'
+
 import 'Common/reset.css'
 import 'Common/common.scss'
 
@@ -14,4 +16,5 @@ if(module.hot){
 
 $(function(){
     console.log("监控预警" + apiPrefix);
+    console.log([5, 6, 7].findIndex(item => item === 6));
 })

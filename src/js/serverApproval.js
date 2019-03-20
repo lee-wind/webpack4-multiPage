@@ -1,3 +1,5 @@
+// import '@babel/polyfill'
+
 import 'Common/reset.css'
 import 'Common/common.scss'
 
@@ -14,5 +16,6 @@ if(module.hot){
 
 $(function(){
     console.log("服务审批" + apiPrefix);
+    console.log([5, 6, 7].find(item => item === 7));
     $('.main h1').text('服务审批');
 })

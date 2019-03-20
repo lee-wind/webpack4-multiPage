@@ -1,3 +1,5 @@
+// import '@babel/polyfill'
+
 import settledApprovalArt from '../template/settledApproval.art'
 import Pagination from 'Common/js/pagination.js'
 
